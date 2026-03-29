@@ -22,6 +22,8 @@
         Title="Filtrar por categoria"
         SelectedIndexChanged="picker_filtro_SelectedIndexChanged"
         HeightRequest="50"/>
+        <Button Text="Limpar Filtro"
+        Clicked="LimparFiltro_Clicked"/>
         <SearchBar x:Name="txt_search" Margin="-15, 0, 0, 0" Placeholder="Pesquisar produto" TextChanged="txt_search_TextChanged"/>
         <Frame Padding="0" Margin="10" VerticalOptions="FillAndExpand">
             <ListView x:Name="lst_produtos" 

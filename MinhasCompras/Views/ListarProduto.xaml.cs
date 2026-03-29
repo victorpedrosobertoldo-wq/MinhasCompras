@@ -198,7 +198,25 @@ public partial class ListarProduto : ContentPage
             await DisplayAlert("Erro", ex.Message, "OK");
         }
     }
+    private async void LimparFiltro_Clicked(object sender, EventArgs e)
+    {
+        try
+        {
 
+            picker_filtro.SelectedItem = null;
+
+
+            lista.Clear();
+
+            List<Produto> todos = await App.Db.GetAll();
+
+            todos.ForEach(i => lista.Add(i));
+        }
+        catch (Exception ex)
+        {
+            await DisplayAlert("Erro", ex.Message, "OK");
+        }
+    }
 
 
 }
