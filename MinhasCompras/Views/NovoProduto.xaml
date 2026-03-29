@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MinhasCompras.Views.NovoProduto"
+             Title="NovoProduto">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Salvar" Clicked="Salvar_Clicked" />
+
+
+    </ContentPage.ToolbarItems>
+    
+    
+    <VerticalStackLayout Spacing="10">
+        <Label Text="Descricao do Produto:"/>
+        <Entry x:Name="DescricaoEntry" Placeholder="Digite a descrição do produto"/>
+
+        <Label Text="Quantidade:"/>
+        <Entry x:Name="QuantidadeEntry" Placeholder="Digite a quantidade"/>
+
+        <Label Text="Preço Unitario:"/>
+        <Entry x:Name="PrecoUnitarioEntry" Placeholder="Digite o preço unitário"/>
+
+        <Picker x:Name="picker_categoria"
+        Title="Selecione uma categoria"
+        ItemDisplayBinding="{Binding categoria_selecionada}" />
+    </VerticalStackLayout>
+</ContentPage>
