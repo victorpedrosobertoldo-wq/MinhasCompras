@@ -8,7 +8,7 @@ public partial class ListarProduto : ContentPage
     ObservableCollection<Produto> lista = new ObservableCollection<Produto>();
 
 
-
+    
     public ListarProduto()
     {
         InitializeComponent();
